@@ -20,6 +20,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/mydb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+    volumes:
+      - ./images:/images   # ✅ Mount host ./images directly to /images inside the container
     depends_on:
       - mysql-db
 
